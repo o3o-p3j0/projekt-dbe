@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autohaus Jordan</title>
+  <link href="css/bootstrap_css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Navbar -->
+    <div id="nav" class="container-fluid  bg-gradient sticky-top ">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg mb-2">
+          <div class="container-fluid">
+            <div class="d-flex flex-nowrap align-items-center">
+              <a class="nav-link mt-2" href="index.html">
+                <h1><b>Autohaus Jordan</b></h1>
+              </a>
+              <img src="img/carLogo.svg" alt="Logo" class="ms-3 logo">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html#ueber_uns">Über uns</a>
+                <a class="nav-link" href="index.html#oeffnungszeiten">Öffnungszeiten</a>
+                <a class="nav-link" href="index.html#kontakt">Kontakt</a>
+                <a class="nav-link" href="fahrzeugsuche.html">Fahrzeugsuche</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="container ">
+        <h2 class="mt-3"><b>Fahrzeugsuche</b></h2>
+        <hr>
+        <form id="filterForm">
+          <!-- Checkboxen für den Fahrzeugtyp -->
+          <fieldset>
+            <h5 class="mt-3"><b>Fahrzeugtyp</b></h5>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="fzgTyp" value="Limousine">
+                  <label class="form-check-label">Limousine</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="fzgTyp" value="Kombi">
+                  <label class="form-check-label">Kombi</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="fzgTyp" value="Cabrio">
+                  <label class="form-check-label">Cabrio</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="fzgTyp" value="SUV">
+                  <label class="form-check-label">SUV</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="fzgTyp" value="Sonstige">
+                  <label class="form-check-label">Sonstige</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+
+          <!-- Selectboxen für Erstzulassung und Kilometer-->
+          <div class="row g-3 align-items-end mt-1">
+            <!-- Erstzulassung -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <h5 class="my-1 d-inline"><b>Erstzulassung </b></h5>
+              <label class="form-label">
+                (ab/bis)
+              </label>
+              <select id="ezVon" class="form-select" name="ezVon">
+                <option value="1900" selected>ab</option>
+                <!-- Jahre werden mit JS generiert -->
+              </select>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <label class="form-label d-none d-md-block">&nbsp;</label>
+              <select id="ezBis" class="form-select" name="ezBis">
+                <option value="2999" selected>bis</option>
+                <!-- Jahre werden mit JS generiert -->
+              </select>
+            </div>
+            <!-- Kilometer -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <h5 class="my-1 d-inline"><b>Kilometer</b></h5>
+              <label class="form-label">
+                (ab/bis)
+              </label>
+              <select id="kmVon" class="form-select" name="kmVon">
+                <option value="0" selected>ab</option>
+                <!-- Kilometerwerte werden mit JS generiert -->
+              </select>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <label class="form-label d-none d-md-block">&nbsp;</label>
+              <select id="kmBis" class="form-select" name="kmBis">
+                <option value="9999999" selected>bis</option>
+                <!-- Kilometerwerte werden mit JS generiert -->
+              </select>
+            </div>
+          </div>
+          <hr>
+
+          <!-- Checkboxen für den Motortyp -->
+          <fieldset>
+            <h5 class="mt-4"><b>Motortyp</b></h5>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="motor" value="Benzin">
+                  <label class="form-check-label">Benzin</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="motor" value="Diesel">
+                  <label class="form-check-label">Diesel</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="motor" value="Elektro">
+                  <label class="form-check-label">Elektro</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="motor" value="Hybrid">
+                  <label class="form-check-label">Hybrid</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+          <!-- Selectboxen für Preis-->
+          <fieldset>
+            <div class="row g-3 align-items-end mt-1">
+              <!-- Preis -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="my-1 d-inline"><b>Preis</b></h5>
+                <label class="form-label">
+                  (von/bis)
+                </label>
+                <select class="form-select" id="preisVon" name="preisVon">
+                  <option value="0" selected>ab</option>
+                  <option value="1000">1.000</option>
+                  <option value="2000">2.000</option>
+                  <option value="5000">5.000</option>
+                  <option value="7500">7.500</option>
+                  <option value="10000">10.000</option>
+                  <option value="20000">20.000</option>
+                  <option value="30000">30.000</option>
+                  <option value="50000">50.000</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <label class="form-label d-none d-md-block">&nbsp;</label>
+                <select class="form-select" id="preisBis" name="preisBis" >
+                  <option value="999999" selected>bis</option>
+                  <option value="1000">1.000</option>
+                  <option value="2000">2.000</option>
+                  <option value="5000">5.000</option>
+                  <option value="7500">7.500</option>
+                  <option value="10000">10.000</option>
+                  <option value="20000">20.000</option>
+                  <option value="30000">30.000</option>
+                  <option value="50000">50.000</option>
+                  <option value="1000000">>50.000</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+          <!-- Suche starten -->
+          <div class="col-12 my-4">
+            <button type="submit" id="suche" class="btn btn-primary">Fahrzeugsuche</button>
+            <button id="resetten" class="btn btn-secondary ms-3">Eingaben zurücksetzen</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Suchergebnisse -->
+      <div class="container">
+        <h5 class="mt-3"><b>Suchergebnis:</b></h5>
+        <div id="suchergebnis">
+          <!-- Wird in Javascript generiert -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Container 3 -->
+    <div id="footer" class="container-fluid">
+      <div class="container">
+
+        <!-- Footer -->
+        <div class="row">
+          <nav class="navbar navbar-expand ">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup2">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link" href="impressum.html">Impressum</a>
+                  <a class="nav-link" href="agb.html">AGB</a>
+                  <a class="nav-link" href="datenschutz.html">Datenschutz</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap_js/bootstrap.js"></script>
+  <script src="js/holeAlleFzg.js"></script>
+  <script src="js/einzelAnsicht.js"></script>
+  <script src="js/zeigeFzg.js"></script>
+  <script src="js/resetSuche.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

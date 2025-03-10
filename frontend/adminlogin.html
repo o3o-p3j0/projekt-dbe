@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autohaus Jordan</title>
+    <link href="css/bootstrap_css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <div id="nav" class="container-fluid bg-gradient sticky-top ">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg mb-2">
+                    <div class="container-fluid">
+                        <a class="nav-link" href="index.html">
+                            <h1><b>Autohaus Jordan</b></h1>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Content - Admin Login -->
+        <div class="content">
+            <div class="container ">
+                <h2 class="mt-5"><b>Admin-Login</b></h2>
+                <hr>
+                <form id="loginForm">
+                    <div class="col-12 col-sm-8 col-md-4 mb-3">
+                        <label for="username" class="form-label">Admin-Benutzername:</label>
+                        <input type="text" class="form-control" id="username" name="username" autocomplete="username"
+                            required>
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-4 mb-3">
+                        <label for="password" class="form-label">Passwort:</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            autocomplete="new-password" required>
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-4 mb-3">
+                        <button type="submit" class="btn btn-primary">Anmelden</button>
+                    </div>
+                </form>
+                <div id="errorMessage" style="color: red;"></div>
+            </div>
+        </div>
+
+        <!-- Container 3 -->
+        <div id="footer" class="container-fluid">
+            <div class="container">
+            </div>
+            <!-- Footer -->
+            <div class="row">
+                <nav class="navbar navbar-expand ">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ms-auto">
+                                <a class="nav-link" href="impressum.html">Impressum</a>
+                                <a class="nav-link" href="agb.html">AGB</a>
+                                <a class="nav-link" href="datenschutz.html">Datenschutz</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap_js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/adminLogin.js"></script>
+
+</body>
+
+</html>
