@@ -30,7 +30,7 @@ for (let km = 10000; km <= 250000; km += 10000) {
   });
 }
 
-// sVerhindern negativer Suchbereiche (EZ, km & Preis)
+// Verhindern negativer Suchbereiche (EZ, km & Preis)
 const ezVon = document.getElementById('ezVon');
 const ezBis = document.getElementById('ezBis');
 
